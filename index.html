@@ -9,16 +9,23 @@
 </head>
 <body>
     <div class="main">
-        <form class="form">
+        <form class="formPlayer" >
+            <input class="inputName" type="text" placeholder="Wpisz imię ...">
+            <input class="inputSurname" type="text" placeholder="Wpisz nazwisko ...">
+        </form>
+        <form class="formGame">
             <label for="quantity">Ilość (od 1 do 10):</label>
             <input class="inputWindow"type="number" id="quantity" name="quantity" min="1" max="10" placeholder="Wybierz">
-            <input class="inputButton" type="submit" value="Submit">
-          </form>
+            
+        </form>
+        <input class="inputButton" type="submit" value="Zatwierdź dane">
         <h1 class="timer">Timer: 0s</h1>
         <button class="clicker">Klikaj tutaj</button>
         <h1 class="showClicker">Liczba kliknięć równa 0</h1>
     </div>
 
+    <script src="function.js"></script>
     <script src="main.js"></script>
+    <script src="user.js"></script>
 </body>
 </html>

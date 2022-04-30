@@ -18,18 +18,25 @@ h1{
     line-height: 80px;
     
 }
-button , .inputButton, .inputWindow{
-    font-size: 35px;
+button , .inputButton {
+    font-size: 20px;
     padding: 10px;
     border: solid 3px black;
     
 }
 
+
 form{
-    font-size: 30px;
+    font-size: 20px;
     font-weight: bold;
 }
 button , .inputButton{
     background-color: cyan ;
     
+}
+.inputName, .inputSurname, .inputWindow {
+    margin-bottom: 30px;
+    font-size: 20px;
+    padding: 5px;
+    border: solid 3px black;
 }
