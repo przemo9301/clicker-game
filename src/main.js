@@ -6,14 +6,16 @@ const inputWindow=document.querySelector('.inputWindow');
 const inputName=document.querySelector('.inputName')
 const inputSurname=document.querySelector('.inputSurname')
 
-const newUser= new UserList()
+// const newUser= new UserList()
 
 // stałe
 let totalClickValue=0;
 let inputValue;
 let firstClickTime;
 let intervalStoper
-const timeToChoose=[];
+
+
+// function 
 
 
 //przyciski
@@ -28,17 +30,8 @@ btnClicker.addEventListener('click',()=>{
 })
 btnSub.addEventListener('click',(e)=>{
     e.preventDefault();
-    inputValue=inputWindow.value;
-    const playerName =inputName.value;
-    const playerSurname =inputSurname.value;
-    const newPlayer= new User(playerName,playerSurname);
-    newUser.add(newPlayer);
-   
-    
-    
-    
-    console.log('dziła', inputValue );
-    
+       
+    inputValue=inputWindow.value; 
 })
 
 console.log(inputValue);
