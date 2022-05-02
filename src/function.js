@@ -1,6 +1,7 @@
 //function
+const newUser= new UserList()
 const putUserInList =(clicksResult)=>{
-    const newUser= new UserList()
+    
     inputValue=inputWindow.value;
     const playerName =inputName.value;
     const playerSurname =inputSurname.value;
@@ -17,27 +18,39 @@ const clearAllValues=()=>{
     intervalStoper =0;     
 }
 
-const finishTime = ()=>{
+// const finishTime = ()=>{
+//     firstClickTime=new Date().getTime()
+//     console.log(firstClickTime);
+    
+//     setTimeout(()=>{
+//         clicker.textContent=`Liczba kliknięć równa ${totalClickValue}`
+//         console.log('work');
+//         clearInterval(intervalStoper)
+//         putUserInList(totalClickValue)
+//         clearAllValues()
+//         },inputValue*1000)
+// } 
+
+const timeToFinish= ()=>{
     firstClickTime=new Date().getTime()
     console.log(firstClickTime);
+    let stoper;
+    intervalStoper =setInterval(()=>{
+    const actualTime= new Date().getTime()
+     stoper=Number(((firstClickTime+(inputValue*1000))-actualTime)/1000).toFixed(2)
     
-    setTimeout(()=>{
+    console.log(stoper);
+    
+    timer.textContent=`Timer: ${stoper}s`
+    if(stoper==0){
+        console.log('działa');
         clicker.textContent=`Liczba kliknięć równa ${totalClickValue}`
         console.log('work');
         clearInterval(intervalStoper)
         putUserInList(totalClickValue)
         clearAllValues()
-        },inputValue*1000)
-} 
-
-const timeToFinish= ()=>{
-    intervalStoper =setInterval(()=>{
-    const actualTime= new Date().getTime()
-    const stoper=Number(((firstClickTime+(inputValue*1000))-actualTime)/1000).toFixed(2)
-    console.log(stoper);
-    
-    timer.textContent=`Timer: ${stoper}s`
-        
+    }  
     },1)
+   
 }
 

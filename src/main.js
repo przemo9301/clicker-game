@@ -23,7 +23,7 @@ btnClicker.addEventListener('click',()=>{
     totalClickValue++;
     console.log(totalClickValue);
     if(totalClickValue===1){
-        finishTime()
+        // finishTime()
         timeToFinish()
     }
     
