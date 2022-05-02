@@ -18,29 +18,32 @@ const clearAllValues=()=>{
     intervalStoper =0;     
 }
 
-// const finishTime = ()=>{
-//     firstClickTime=new Date().getTime()
-//     console.log(firstClickTime);
-    
-//     setTimeout(()=>{
-//         clicker.textContent=`Liczba kliknięć równa ${totalClickValue}`
-//         console.log('work');
-//         clearInterval(intervalStoper)
-//         putUserInList(totalClickValue)
-//         clearAllValues()
-//         },inputValue*1000)
-// } 
+const switchOnClicker=()=>{
+    btnClicker.disabled= false;
+    btnChangePlayerInfo.disabled=false;
+    btnSub.disabled=true;
+    inputName.disabled=true;
+    inputSurname.disabled=true;
+    inputWindow.disabled=true;
+}
+
+const switchOnUserInput=()=>{
+    btnClicker.disabled= true;
+    btnChangePlayerInfo.disabled=true;
+    btnSub.disabled=false;
+    inputName.disabled=false;
+    inputSurname.disabled=false;
+    inputWindow.disabled=false;
+}
+// ważniejsze funkcje 
 
 const timeToFinish= ()=>{
     firstClickTime=new Date().getTime()
     console.log(firstClickTime);
-    let stoper;
+    
     intervalStoper =setInterval(()=>{
-    const actualTime= new Date().getTime()
-     stoper=Number(((firstClickTime+(inputValue*1000))-actualTime)/1000).toFixed(2)
-    
-    console.log(stoper);
-    
+    const actualTime= new Date().getTime();
+    const stoper=Number(((firstClickTime+(inputValue*1000))-actualTime)/1000).toFixed(2);
     timer.textContent=`Timer: ${stoper}s`
     if(stoper==0){
         console.log('działa');
@@ -49,6 +52,7 @@ const timeToFinish= ()=>{
         clearInterval(intervalStoper)
         putUserInList(totalClickValue)
         clearAllValues()
+        switchOnUserInput()
     }  
     },1)
    
