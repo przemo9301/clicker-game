@@ -9,24 +9,31 @@
 </head>
 <body>
     <div class="main">
-        <form class="formPlayer" >
-            <label for="name">Imię:</label>
-            <input class="inputName" id="name" 
-            type="text" placeholder="Wpisz imię ...">
+        <form class="formPlayer">
+            <label for="name">Name:</label>
+            <input class="inputName" id="name"
+                   type="text" placeholder="Typing name ...">
             <br>
-            <label for="surname">Nazwisko:</label>
-            <input class="inputSurname" id="surname" type="text" placeholder="Wpisz nazwisko ...">
+            <label for="surname">Surname:</label>
+            <input class="inputSurname" id="surname" type="text" placeholder="Typing surname ...">
         </form>
         <form class="formGame">
-            <label for="quantity">Długość próby w sekundach:</label>
-            <input class="inputWindow"type="number" id="quantity" name="quantity" min="1" max="10" placeholder="sek">
-            
+            <label for="quantity">Time of attempt:</label>
+            <input class="inputWindow" type="number" id="quantity" name="quantity" min="1" max="10" placeholder="sek">
+
         </form>
-        <input class="inputButton" type="submit" value="Zatwierdź dane">
-        <button class="changePlayerInfo" disabled> Edytuj dane </button>
+        <input class="inputButton" type="submit" value="Approve data ">
+        <button class="changePlayerInfo" disabled> Edit data</button>
         <h1 class="timer">Timer: 0.00s</h1>
-        <button class="clicker" disabled>Klikaj tutaj</button>
-        <h1 class="showClicker">Liczba kliknięć równa 0</h1>
+        <button class="clicker" disabled>Click here</button>
+        <h1 class="showClicker">Number of clicks equal: 0</h1>
+        <h1>List of users with best score </h1>
+        <block>
+            <div>Place:</div>
+            <div>Name:</div>
+            <div>Surname:</div>
+            <div>Result:</div>
+        </block>
     </div>
     <script src="/src/user.js"></script>
     <script src="/src/function.js"></script>
