@@ -9,10 +9,11 @@ class UserList {
     }
 } 
 class User {
-    constructor(name,surname,time,result){
+    constructor(name,surname,time,result,date){
         this.name=name;
         this.surname=surname;
         this.time=time;
-        this.result=result
+        this.result=result;
+        this.date=date;
     }
 }

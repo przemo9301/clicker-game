@@ -1,14 +1,14 @@
 // buttons
 const btnClicker =document.querySelector('.clicker');
-const timer=document.querySelector('.timer')
-const btnChangePlayerInfo=document.querySelector('.changePlayerInfo')
+const btnSubmit=document.querySelector('.inputButton');
+const btnChangePlayerInfo=document.querySelector('.changePlayerInfo');
 //inputs windows
 const inputWindow=document.querySelector('.inputWindow');
 const inputName=document.querySelector('.inputName')
 const inputSurname=document.querySelector('.inputSurname')
 //others
 const clicker=document.querySelector('.showClicker');
-const btnSub=document.querySelector('.inputButton');
+const timer=document.querySelector('.timer');
 
 // variable
 let totalClickValue=0;
@@ -26,7 +26,7 @@ btnClicker.addEventListener('click',()=>{
     }
     
 })
-btnSub.addEventListener('click',(e)=>{
+btnSubmit.addEventListener('click',(e)=>{
     e.preventDefault();   
     inputValue=inputWindow.value; 
     timer.textContent=`Timer: ${inputValue}.00s`;

@@ -1,11 +1,20 @@
 //function
 const newUser= new UserList()
-const putUserInList =(clicksResult)=>{
+
+const userValidation = (fname,surname,clickerValue)=>{
+    if(fname.length>3&&fname.includes())
     
+    
+    
+}
+
+const putUserInList =(clicksResult)=>{
     inputValue=inputWindow.value;
     const playerName =inputName.value;
     const playerSurname =inputSurname.value;
-    const newPlayer= new User(playerName,playerSurname,inputValue,clicksResult);
+    const currentDate= new Date().toLocaleString();
+    const newPlayer= new User(playerName,playerSurname,inputValue,clicksResult,currentDate);
+    userValidation(playerName,playerSurname,inputValue)
     newUser.add(newPlayer);
     inputName.value='';
     inputWindow.value='';
@@ -21,7 +30,7 @@ const clearAllValues=()=>{
 const switchOnClicker=()=>{
     btnClicker.disabled= false;
     btnChangePlayerInfo.disabled=false;
-    btnSub.disabled=true;
+    btnSubmit.disabled=true;
     inputName.disabled=true;
     inputSurname.disabled=true;
     inputWindow.disabled=true;
@@ -30,7 +39,7 @@ const switchOnClicker=()=>{
 const switchOnUserInput=()=>{
     btnClicker.disabled= true;
     btnChangePlayerInfo.disabled=true;
-    btnSub.disabled=false;
+    btnSubmit.disabled=false;
     inputName.disabled=false;
     inputSurname.disabled=false;
     inputWindow.disabled=false;
