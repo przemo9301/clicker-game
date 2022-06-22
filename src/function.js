@@ -3,7 +3,7 @@ const newUser= new UserList()
 
 const userValidation = (fname,surname,clickerValue)=>{
     if(fname.length>3&&fname.includes())
-    
+    {}
     
     
 }
