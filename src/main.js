@@ -30,7 +30,7 @@ btnSubmit.addEventListener('click', (e) => {
     e.preventDefault();
     inputValue = inputWindow.value;
     timer.textContent = `Timer: ${inputValue}.00s`;
-    switchOnUserInputOrClicker(false)
+    switchOnUserInputOrClicker(false);
 })
 
 btnChangePlayerInfo.addEventListener('click', () => {

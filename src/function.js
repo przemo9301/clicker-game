@@ -8,13 +8,14 @@ const putUserInList = (clicksResult) => {
     const playerSurname = inputSurname.value;
     const currentDate = new Date().toLocaleString();
     const newPlayer = new User(playerName, playerSurname, inputValue, clicksResult, currentDate);
-    newUser.add(newPlayer);
+    const user1 = newUser.add(newPlayer);
+    newUser.saveUserInDatabase();
+    console.log(user1);
     inputName.value = '';
     inputWindow.value = '';
     inputSurname.value = '';
 }
 
-// ważniejsze funkcje
 
 const timeToFinish = () => {
     firstClickTime = new Date().getTime()
@@ -31,7 +32,7 @@ const timeToFinish = () => {
             clearInterval(intervalStopper)
             putUserInList(totalClickValue)
             clearAllValues()
-            switchOnUserInputOrClicker()
+            switchOnUserInputOrClicker(true)
         }
     }, 1)
 
